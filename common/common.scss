@@ -36,11 +36,11 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 /* Rules for using icons as black on a light background. */
 
 .material-icons.md-dark {
-  color: rgba(0, 0, 0, 0.54);
+  color: var(--secondary-medium, $secondary-medium);
 }
 
 .material-icons.md-dark.md-inactive {
-  color: rgba(0, 0, 0, 0.26);
+  color: var(--secondary-high, $secondary-high);
 }
 
 /* Rules for using icons as white on a dark background. */
@@ -316,7 +316,7 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
   font-weight: normal;
 }
 .md-nav-drawer .md-entry:hover {
-  background-color: var(--secondary, $secondary);
+  background-color: var(--secondary-very-high, $secondary-very-high);
   animation: md-entry-hover .25s ease-out !important;
 }
 
