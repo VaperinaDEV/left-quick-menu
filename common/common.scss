@@ -121,13 +121,6 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
     height: calc(100% - 72px);
     border-radius: 8px;
   }
-  .md-nav-drawer-wrapper {
-    z-index: -1;
-  }
-}
-
-.permanent-nav-drawer .d-header #overlay {
-  display: none;
 }
 
 .permanent-nav-drawer #main-outlet:after {
