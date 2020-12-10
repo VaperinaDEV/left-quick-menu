@@ -80,7 +80,12 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 }
 
 .d-header-left .header-dropdown-toggle {
-  margin-right: 5px !important;
+    margin-right: -3px !important;
+    background: none !important;
+}
+
+.d-header-left .header-dropdown-toggle a svg {
+    color: var(--tertiary, $tertiary);
 }
 
 .d-header>#overlay.inactive {
