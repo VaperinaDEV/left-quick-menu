@@ -1,0 +1,14 @@
+{
+  "name": " Left Quick Menu",
+  "about_url": "https://github.com/misaka4e21/material-design-sidebar-theme",
+  "assets": {
+  },
+  "color_schemes": {
+    "VUser Menu": {
+      "tertiary": "0763fd",
+      "quaternary": "0763fd",
+      "header_background": "ffffff",
+      "header_primary": "222222"
+    }
+  }
+}
