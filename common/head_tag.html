@@ -84,9 +84,9 @@ function getUser() {
                     case 'navbar_background':
                         return settings.sidebar_userinfo_background_default;
                     case 'username':
-                        return 'hitorino';
+                        return 'Vaperina';
                     case 'name':
-                        return '未登录';
+                        return 'Látogató';
                     case 'unread_notifications':
                     case 'unread_private_messages':
                         return 0;
@@ -212,7 +212,7 @@ api.createWidget('md-nav-drawer', _.extend({}, {
         if (!Discourse.User.current()) {
             return api.h('div.account', [
                 api.h('span.subheader', I18n.t('user.preferences_nav.account')),
-                mdEntry('/login', 'sign-in', I18n.t('log_in'))
+                mdEntry('/login', 'sign-in-alt', I18n.t('log_in'))
             ])
         }
         const user = this.user;        
