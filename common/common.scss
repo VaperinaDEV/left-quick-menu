@@ -161,6 +161,7 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
   .md-nav-drawer {
     top: 82px;
     height: calc(100% - 82px);
+    border-radius: 0px 8px 8px 0px;
   }
   .md-nav-drawer-wrapper {
     z-index: -1;
@@ -283,6 +284,7 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 .md-nav-drawer ul.category-links {
   list-style-type: none;
   margin: 0;
+  display: none;
   .category-link {
     padding: 0;
   }
