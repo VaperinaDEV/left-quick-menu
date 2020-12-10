@@ -6,7 +6,6 @@ const DiscourseURL = require('discourse/lib/url').default;
 const userPath = require('discourse/lib/url').userPath;
 const wantsNewWindow = require('discourse/lib/intercept-click').wantsNewWindow;
 const h = api.h;
-const logout = require('discourse/lib/logout').default;
 
 // notification
 const RawHtml = require('discourse/widgets/raw-html').default;
@@ -226,10 +225,6 @@ api.createWidget('md-nav-drawer', _.extend({}, {
             admin,
             mdEntry(`/u/${user.get('username')}/preferences`,
                 'settings', I18n.t('user.preferences')),
-            api.h('a#logout.md-entry.initial', [
-                mdIcon('sign-out'),
-                api.h('span', I18n.t('user.log_out'))
-            ])
         ]);
     },
 
@@ -262,17 +257,6 @@ api.createWidget('md-nav-drawer', _.extend({}, {
             this.misc()
         ];
     },
-    click(e) {
-        if (!aClickHandler(e)) {
-            return false;
-        } else if ($(e.target).is('a#logout, a#logout *')) {
-            e.preventDefault();
-            api.container.lookup("controller:application").send("logout");
-            return false
-        } else {
-            return false;
-        }
-    }
 }));
 
 
@@ -298,48 +282,12 @@ api.createWidget('md-nav-drawer-overlay', {
 
 // Widgets
 
-{
-    api.createWidget('mdnavbar-switchview', {
-        tagName: 'a#switch-view.md-entry.initial',
-        html() {
-            const site = Discourse.Site.current();
-            var sv = {};
-            if (site.mobileView == true) {
-                sv = {
-                    mode: 0,
-                    icon: "laptop",
-                    title: I18n.t('desktop_view')
-                };
-            } else {
-                sv = {
-                    mode: 1,
-                    icon: "cellphone",
-                    title: I18n.t('mobile_view')
-                };
-            }
-            return [
-                mdIcon(sv.icon),
-                api.h('span', sv.title)
-            ];
-        },
-        click(e) {
-            const Mobile = require('discourse/lib/mobile').default;
-            e.stopPropagation();
-            e.preventDefault();
-            Mobile.toggleMobileView();
-            return false
-        }
-    });
-}
-
-
-
 api.createWidget('md-header-dropdown-hamburger', {
     tagName: 'ul.icons.d-header-icons.d-header-left',
     html(attrs, state) {
         return this.attach('header-dropdown', {
             title: 'hamburger_menu',
-            icon: 'bars',
+            icon: 'chevron-right',
             iconId: 'toggle-nav-drawer',
             active: false, // Keep active false in order to allow NavDrawer-closing.
             action: 'toggleHamburgerActive',
@@ -372,7 +320,7 @@ api.reopenWidget('header', {
 
 api.decorateWidget('header:before', dec => {
     return (window.MDGlobalState.get('navDrawerIsOpen') ? [
-        dec.h('div.md-nav-drawer-wrapper', [dec.attach('md-nav-drawer')]),
+        dec.h('div.md-nav-drawer-wrapper.slide-in', [dec.attach('md-nav-drawer')]),
         dec.attach('md-nav-drawer-overlay')
     ] : [])
 })
