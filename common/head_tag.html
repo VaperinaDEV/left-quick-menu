@@ -320,7 +320,7 @@ api.reopenWidget('header', {
 
 api.decorateWidget('header:before', dec => {
     return (window.MDGlobalState.get('navDrawerIsOpen') ? [
-        dec.h('div.md-nav-drawer-wrapper.slide-in', [dec.attach('md-nav-drawer')]),
+        dec.h('div.md-nav-drawer-wrapper', [dec.attach('md-nav-drawer')]),
         dec.attach('md-nav-drawer-overlay')
     ] : [])
 })
