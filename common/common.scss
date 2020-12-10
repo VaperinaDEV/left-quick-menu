@@ -72,18 +72,6 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 }
 
 .d-header .d-header-icons {
-  a.icon {
-    padding: 0;
-    border: 0;
-    color: $header_primary;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    &:hover {
-      background-color: orange;
-    }
-  }
-
   .drop-down-mode & {
     .active a.icon {
       background-color: transparent !important;
@@ -181,10 +169,6 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 
 .permanent-nav-drawer .d-header #overlay {
   display: none;
-}
-
-.permanent-nav-drawer #main-outlet {
-  margin-left: 272px;
 }
 
 .permanent-nav-drawer #main-outlet:after {
