@@ -85,9 +85,9 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 .md-nav-drawer-wrapper {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 54px;
   width: 272px;
-  height: 100%;
+  height: calc(100% - 72px);
   z-index: 1003;
 }
 
