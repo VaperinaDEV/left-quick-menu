@@ -63,10 +63,6 @@ if (Discourse.User.current()) {
         navDrawerIsPermanent: false,
         navDrawerIsOpen: false
     }).create();
-    window.MDNavDrawerUpdatePermanent = function() {
-        window.MDGlobalState.set('navDrawerIsPermanent', $(window).width()>1126+270);
-    };
-
     window.MDNavDrawerIsPermanent = function() {
         return window.MDGlobalState.get('navDrawerIsPermanent');
     };
