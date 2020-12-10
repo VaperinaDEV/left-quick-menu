@@ -66,59 +66,12 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 }
 
 /* header: topbar*/
-.d-header {
-  padding: 0;
-  height: 56px;
-}
-
-.d-header .d-header-icons {
-  .drop-down-mode & {
-    .active a.icon {
-      background-color: transparent !important;
-      border: none !important;
-      color: $header_primary !important;
-      &:after {
-        display: none;
-      }
-    }
-  }
-
-  &:after {
-    display: none !important;
-  }
-}
-
-.d-header .d-header-left>li {
-  margin: 0px;
-  margin-right: 5px;
-}
-
-.d-header .d-header-left.icons {
-  margin-left: 0px;
-}
-
 .d-header>#overlay {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-}
-
-.d-header>.wrap {
-  max-width: 100%;
-  width: 100%;
-  padding: 0px;
-}
-
-.d-header>.wrap>.contents {
-  top: 0;
-  left: 0;
-  width: calc(100% - 16px);
-  margin: 0;
-  padding: 4px;
-  padding-left: 8px;
-  z-index: 1000;
 }
 
 .d-header>#overlay.inactive {
