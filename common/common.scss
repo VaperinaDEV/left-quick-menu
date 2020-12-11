@@ -68,11 +68,15 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 
 /* header: topbar*/
 .d-header>#overlay {
+  height: 100vh;
+  width: 100vw;
   position: fixed;
+  background-color: black;
+  opacity: 0.5;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  display: none;
+  touch-action: pan-y pinch-zoom;
 }
 
 #toggle-nav-drawer {
