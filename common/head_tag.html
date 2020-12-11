@@ -244,7 +244,11 @@ api.createWidget('md-nav-drawer', _.extend({}, {
             ...links,
             this.attach('mdnavbar-switchview')
         ]);
-    },
+        click: clickActionHandler,
+            clickAction(e) {
+                window.MDGlobalState.set('navDrawerIsOpen', false);
+            }
+        },
 
     html() {
         this.user = Discourse.User.current();
@@ -256,10 +260,6 @@ api.createWidget('md-nav-drawer', _.extend({}, {
             this.misc()
         ];
     },
-    click: clickActionHandler,
-    clickAction(e) {
-        window.MDGlobalState.set('navDrawerIsOpen', false);
-    }
 }));
 
 
@@ -396,6 +396,3 @@ $(document).ready(function(){
     }
 });
 </script>
-
-
-
