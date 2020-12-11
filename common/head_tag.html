@@ -38,8 +38,10 @@ function aClickHandler(e) {
         'true') {
         e.preventDefault();
         DiscourseURL.routeTo(e.target.getAttribute('href'));
-        window.MDGlobalState.set('navDrawerIsOpen', false);
         return false;
+    }
+     clickAction(e) {
+        window.MDGlobalState.set('navDrawerIsOpen', false);
     }
     return true;
 }
