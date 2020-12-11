@@ -256,6 +256,10 @@ api.createWidget('md-nav-drawer', _.extend({}, {
             this.misc()
         ];
     },
+    click: clickActionHandler,
+    clickAction(e) {
+        window.MDGlobalState.set('navDrawerIsOpen', false);
+    }
 }));
 
 
