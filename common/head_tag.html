@@ -40,6 +40,9 @@ function aClickHandler(e) {
         DiscourseURL.routeTo(e.target.getAttribute('href'));
         return false;
     }
+    clickAction(e) {
+        window.MDGlobalState.set('navDrawerIsOpen', false);
+    }
     return true;
 }
 
@@ -255,10 +258,6 @@ api.createWidget('md-nav-drawer', _.extend({}, {
             this.account(),
             this.misc()
         ];
-        click: clickActionHandler,
-            clickAction(e) {
-                window.MDGlobalState.set('navDrawerIsOpen', false);
-            }
     },
 }));
 
