@@ -105,7 +105,7 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
   position: fixed;
   left: 0;
   top: 54px;
-  width: 320px;
+  width: 272px;
   height: calc(100% - 72px);
   z-index: 1003;
 }
@@ -117,12 +117,12 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 .md-nav-drawer-wrapper .md-nav-drawer {
   position: absolute;
   background-image: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%),linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
-  width: 320px;
+  width: 272px;
   left: 0;
   border-radius: 8px;
   box-shadow: $MDELEV16;
   z-index: 1003;
-  overflow: auto;
+  overflow-y: auto;
   text-align: left;
   animation: slidein-menu 0.25s ease-out;
 }
