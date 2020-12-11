@@ -129,10 +129,6 @@ function mdEntry (link, icon, text, count = 0, isExternalLink = false) {
         api.h('span', text),
         countSpan
     ]);
-    click: clickActionHandler,
-        clickAction(e) {
-            window.MDGlobalState.set('navDrawerIsOpen', false);
-    }
 };
 
 
