@@ -107,7 +107,7 @@ $MDELEV16: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),
 
 .md-nav-drawer-wrapper .md-nav-drawer {
   position: absolute;
-  background-image: linear-gradient(0deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 100%),linear-gradient(0deg, var(--secondary) 100%, var(--secondary) 100%);
+  background: var(--secondary, $secondary);
   width: 272px;
   height: calc(100% - 52px);
   left: 0;
