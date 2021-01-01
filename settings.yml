@@ -1,10 +1,10 @@
 sidebar_userinfo_background_default:
   type: string
-  default: 'https://forum.hitorino.moe/uploads/default/original/1X/6e3efd0a3b368ef708e1b70c550359f01f701f50.png'
+  default: 'https://vaperina-assets-02-cdn.b-cdn.net/assets/left-menu/left-panel-background1.jpg'
   description:
     en: 'Default background of the userInfo field in the sidebar.'
 sidebar_extra_links:
   type: list
-  default: 'FAQ,/faq,question|Guidelines,/tos,balance-scale|Privacy,/privacy,user-secret'
+  default: 'VapeDIY,https://diy.vaperina.cc,flask|Vaper Lokátor,/u/user-map?period=location,compass|Vaperina - AfterGift,/t/vaperina-aftergift/3370,gift|Támogatás menete,/t/tamogato-leszek/601,heartbeat|Aukció,/c/tamogatas/aukcio/51,gavel|Vaperina Live,/c/vaperina-live/57,users|Útmutató az oldalhoz,/t/utmutato-az-oldal-hasznalatahoz/757,question-circle|Bizalmi szintek,/t/kozossegepites-felsofokon-bizalmi-szintek-korlatozasok/718,certificate'
   description:
     en: 'Additional links. Format: <name>,<url>[,<icon>]'
